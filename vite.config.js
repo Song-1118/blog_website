@@ -22,5 +22,8 @@ export default defineConfig({
       '@': path.resolve(__dirname, './src'), // 关键配置
       '#': path.resolve(__dirname, './public'),
     }
-  }
+  },
+  build: {
+    outDir: 'dist',
+  },
 })
