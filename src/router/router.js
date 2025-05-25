@@ -28,10 +28,10 @@ const routes = [
     component: Player1,
   },
   {
-    // 404
-    path: "/:catchAll(.*)",
-    component: Error,
-  }
+    path: "/:pathMatch(.*)*",
+    name: "NotFound",
+    component: () => import("@/views/404.vue"),
+  },
 ];
 
 const router = createRouter({
